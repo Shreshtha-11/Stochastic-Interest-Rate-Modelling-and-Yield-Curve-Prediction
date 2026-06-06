@@ -1,7 +1,7 @@
-# Stochastic Interest Rate Modelling and Prediction
+# Stochastic Interest Rate Modelling and Yield Curve Prediction
 
 ## Project Overview
-This repository contains a comprehensive implementation, calibration, and extension of the **Cox-Ingersoll-Ross (CIR)** stochastic short-rate model using historical yield curve data. The project is specifically designed to evaluate the predictive power of short-rate models when subjected to real-world market dynamics and macroeconomic regime shifts.
+This repository implements, calibrates, and extends the **Cox-Ingersoll-Ross (CIR)** stochastic short-rate model using historical yield curve data. It is specifically designed to evaluate the predictive power of short-rate models when subjected to real-world market dynamics and macroeconomic regime shifts.
 
 The primary objective is an **Out-of-Sample Prediction Challenge**: Reconstructing the entire yield curve (maturities ranging from 6 Months to 30 Years) for any given day in the testing period by ingesting **only the 3-Month yield** as a proxy for the instantaneous short rate ($r_t$).
 
@@ -23,6 +23,7 @@ The primary objective is an **Out-of-Sample Prediction Challenge**: Reconstructi
 - `test_data.csv`: Held-out ground truth data used strictly for $R^2$ validation scoring.
 
 ## How to Run
-The project is encapsulated entirely within `Stochastic_Interest_Rate_Modelling.ipynb`. Ensure your environment has the required scientific libraries (`pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`, `scikit-learn`).
+The project is encapsulated entirely within `Stochastic_Interest_Rate_Modelling.ipynb`. Ensure your environment has the required scientific computing libraries (`pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`, `scikit-learn`).
 
+Execute the notebook sequentially from top to bottom. It will automatically load the dataset, filter outliers, calibrate all variations of the CIR model, and generate the final out-of-sample evaluation metrics alongside visual performance dashboards.
 Execute the notebook sequentially from top to bottom. It will automatically load the data, process outliers, calibrate the models, and generate the final out-of-sample evaluation metrics and visual dashboards.
